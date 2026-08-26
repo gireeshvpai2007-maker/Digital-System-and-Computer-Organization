@@ -1,0 +1,63 @@
+$date
+	Wed Aug 26 22:24:35 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module bitadder4_tb $end
+$var wire 4 ! Sum [3:0] $end
+$var wire 1 " Cout $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$var reg 1 % Cin $end
+$scope module uut $end
+$var wire 4 & A [3:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 1 % Cin $end
+$var wire 4 ( carry [3:0] $end
+$var wire 4 ) Sum [3:0] $end
+$var wire 1 " Cout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11 )
+bz000 (
+b10 '
+b1 &
+0%
+b10 $
+b1 #
+0"
+b11 !
+$end
+#10
+1"
+bz111 (
+b0 !
+b0 )
+b1 $
+b1 '
+b1111 #
+b1111 &
+#20
+1%
+b101 $
+b101 '
+b1010 #
+b1010 &
+#30
+b1111 !
+b1111 )
+b1111 $
+b1111 '
+b1111 #
+b1111 &
+#40
