@@ -9,7 +9,7 @@ module solve(
 wire g;
 mux2to1 mux1(
     .s(b),
-    .d({c, ~c}),
+    .d({~c,c}),
     .y(g)
 );
 mux2to1 mux2(
@@ -19,12 +19,15 @@ mux2to1 mux2(
 );
 endmodule
 module mux2to1(
-    reg s,
-    reg [1:0] d,
-    wire y
+    input s,
+    input [1:0] d,
+    output reg y
 );
+always @(*) 
+begin
 if(s==0)
     y=d[0];
 else
     y=d[1];
+end
 endmodule

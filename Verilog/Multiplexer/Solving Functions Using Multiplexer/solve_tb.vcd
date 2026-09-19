@@ -1,0 +1,76 @@
+$date
+	Sat Sep 19 22:05:23 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module solve_tb $end
+$var wire 1 ! f $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ c $end
+$scope module uut $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % g $end
+$var wire 1 ! f $end
+$scope module mux1 $end
+$var wire 2 & d [1:0] $end
+$var wire 1 # s $end
+$var reg 1 % y $end
+$upscope $end
+$scope module mux2 $end
+$var wire 2 ' d [1:0] $end
+$var wire 1 " s $end
+$var reg 1 ! y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+b10 &
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+b10 '
+1%
+b1 &
+1$
+#20
+1!
+1%
+b10 &
+0$
+b11 '
+1#
+#30
+b1 '
+0%
+b1 &
+1$
+#40
+0!
+b10 &
+0$
+b0 '
+0#
+1"
+#50
+1!
+b10 '
+1%
+b1 &
+1$
