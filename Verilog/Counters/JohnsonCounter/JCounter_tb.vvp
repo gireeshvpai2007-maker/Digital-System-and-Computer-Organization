@@ -1,0 +1,159 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000195dc957400 .scope module, "JCounter_tb" "JCounter_tb" 2 4;
+ .timescale -9 -9;
+v00000195dc963510_0 .var "clk", 0 0;
+v00000195dc963b50_0 .net "q", 3 0, L_00000195dc963ab0;  1 drivers
+v00000195dc962cf0_0 .var "reset", 0 0;
+S_00000195dc95b820 .scope module, "uut" "JCounter" 2 9, 3 1 0, S_00000195dc957400;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /OUTPUT 4 "q";
+L_00000195dca3df20 .functor NOT 1, L_00000195dc9631f0, C4<0>, C4<0>, C4<0>;
+v00000195dc962d90_0 .net *"_ivl_1", 0 0, L_00000195dc9631f0;  1 drivers
+v00000195dc962f70_0 .net "clk", 0 0, v00000195dc963510_0;  1 drivers
+v00000195dc963010_0 .net "q", 3 0, L_00000195dc963ab0;  alias, 1 drivers
+v00000195dc963790_0 .net "reset", 0 0, v00000195dc962cf0_0;  1 drivers
+L_00000195dc9631f0 .part L_00000195dc963ab0, 3, 1;
+L_00000195dc9635b0 .part L_00000195dc963ab0, 0, 1;
+L_00000195dc963650 .part L_00000195dc963ab0, 1, 1;
+L_00000195dc963a10 .part L_00000195dc963ab0, 2, 1;
+L_00000195dc963ab0 .concat8 [ 1 1 1 1], v00000195dc956180_0, v00000195dc932760_0, v00000195dc932b70_0, v00000195dc963470_0;
+S_00000195dc966680 .scope module, "dff0" "dff" 3 5, 3 10 0, S_00000195dc95b820;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+v00000195dc932de0_0 .net "clk", 0 0, v00000195dc963510_0;  alias, 1 drivers
+v00000195dc95b6d0_0 .net "d", 0 0, L_00000195dca3df20;  1 drivers
+v00000195dc956180_0 .var "q", 0 0;
+v00000195dc956220_0 .net "reset", 0 0, v00000195dc962cf0_0;  alias, 1 drivers
+E_00000195dca3a110 .event posedge, v00000195dc932de0_0;
+S_00000195dc966810 .scope module, "dff1" "dff" 3 6, 3 10 0, S_00000195dc95b820;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+v00000195dc9669a0_0 .net "clk", 0 0, v00000195dc963510_0;  alias, 1 drivers
+v00000195dc966a40_0 .net "d", 0 0, L_00000195dc9635b0;  1 drivers
+v00000195dc932760_0 .var "q", 0 0;
+v00000195dc932800_0 .net "reset", 0 0, v00000195dc962cf0_0;  alias, 1 drivers
+S_00000195dc9328a0 .scope module, "dff2" "dff" 3 7, 3 10 0, S_00000195dc95b820;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+v00000195dc932a30_0 .net "clk", 0 0, v00000195dc963510_0;  alias, 1 drivers
+v00000195dc932ad0_0 .net "d", 0 0, L_00000195dc963650;  1 drivers
+v00000195dc932b70_0 .var "q", 0 0;
+v00000195dc963290_0 .net "reset", 0 0, v00000195dc962cf0_0;  alias, 1 drivers
+S_00000195dc9b3870 .scope module, "dff3" "dff" 3 8, 3 10 0, S_00000195dc95b820;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /INPUT 1 "d";
+    .port_info 3 /OUTPUT 1 "q";
+v00000195dc962ed0_0 .net "clk", 0 0, v00000195dc963510_0;  alias, 1 drivers
+v00000195dc962e30_0 .net "d", 0 0, L_00000195dc963a10;  1 drivers
+v00000195dc963470_0 .var "q", 0 0;
+v00000195dc963bf0_0 .net "reset", 0 0, v00000195dc962cf0_0;  alias, 1 drivers
+    .scope S_00000195dc966680;
+T_0 ;
+    %wait E_00000195dca3a110;
+    %load/vec4 v00000195dc956220_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000195dc956180_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v00000195dc95b6d0_0;
+    %assign/vec4 v00000195dc956180_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_00000195dc966810;
+T_1 ;
+    %wait E_00000195dca3a110;
+    %load/vec4 v00000195dc932800_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000195dc932760_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v00000195dc966a40_0;
+    %assign/vec4 v00000195dc932760_0, 0;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_00000195dc9328a0;
+T_2 ;
+    %wait E_00000195dca3a110;
+    %load/vec4 v00000195dc963290_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000195dc932b70_0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/vec4 v00000195dc932ad0_0;
+    %assign/vec4 v00000195dc932b70_0, 0;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_00000195dc9b3870;
+T_3 ;
+    %wait E_00000195dca3a110;
+    %load/vec4 v00000195dc963bf0_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_3.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000195dc963470_0, 0;
+    %jmp T_3.1;
+T_3.0 ;
+    %load/vec4 v00000195dc962e30_0;
+    %assign/vec4 v00000195dc963470_0, 0;
+T_3.1 ;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_00000195dc957400;
+T_4 ;
+    %vpi_call 2 16 "$dumpfile", "JCounter_tb.vcd" {0 0 0};
+    %vpi_call 2 17 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000195dc957400 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000195dc963510_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000195dc962cf0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000195dc962cf0_0, 0, 1;
+    %delay 100, 0;
+    %vpi_call 2 24 "$finish" {0 0 0};
+    %end;
+    .thread T_4;
+    .scope S_00000195dc957400;
+T_5 ;
+    %delay 5, 0;
+    %load/vec4 v00000195dc963510_0;
+    %inv;
+    %store/vec4 v00000195dc963510_0, 0, 1;
+    %jmp T_5;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "JCounter_tb.v";
+    "./JCounter.v";
