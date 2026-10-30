@@ -29,14 +29,14 @@ begin
         3'b101: next_state = (w) ? 3'b100 : 3'b110;
         3'b110: next_state = (w) ? 3'b101 : 3'b001;
 
-        default: next_state = 3'b000;
+        default: next_state = 3'b001;
     endcase
 end
 assign T=(next_state ^ Q);
 
-t_ff tff0(T[0], clk, reset, Q[0]);
-t_ff tff1(T[1], clk, reset, Q[1]);   
-t_ff tff2(T[2], clk, reset, Q[2]);
+t_ff tff0(clk, reset, T[0], Q[0]);
+t_ff tff1(clk, reset, T[1], Q[1]);
+t_ff tff2(clk, reset, T[2], Q[2]);
 endmodule
 module t_ff(
     input clk,
